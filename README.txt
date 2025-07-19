@@ -21,11 +21,20 @@ prepare_pancancer2.m
 	input: phostable.csv, aligned sequences
 	output: phoslist_with_conversion.csv
 
-
+catboost_features.py
+	Calculates FoldX and structural features
+	Usage: python catboost_features.py tsu to calculate the features for the Tsuboyama dataset
+	       python catboost_features.py cancer to calculate the features for the cancer dataset
+		python your_script_name.py single --pdb_file <pdbfile> --mutation <ex. "S123A"> --output_csv <outfile> 
+Machine Learning
+--------------------
+CatBoostRegression.py
+	Reads the feature file from the external and Tsuiboyama datasets and constructs the cataboost model
+	input: external and tsuiboyama datasets as csv
+	ouutput: Catboost model 
 
 Post-Machine Learning
 ---------------------
-
 remove_duplicates.m
 	Removes rows with the same uniprot ID and mutated residue number
 	input: Dataset_6.csv (from machine learning)
