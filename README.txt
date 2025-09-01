@@ -1,3 +1,6 @@
+PhosphoDDG: A program to predict protein stability change due to phosphorylation
+For the most recent version, see Github: https://github.com/sriram-lab/phosphorylation
+
 Pre-Machine Learning
 --------------------
 
@@ -65,5 +68,33 @@ psp_search.m
 	input: alpha_predictions.csv, posit
 	output: energies
 
-The list of all 300k tyrosine predictions from alphafold2 are given here: https://drive.google.com/file/d/1Tb6tZ4-Zc7kxQhbsGuGvEgLBZ_PjhNZ5/view?usp=sharing
-	
+The list of all 300k tyrosine predictions from alphafold2 are available on Zenodo. The XGB_Predictions column contains predictions referenced in the publication. 
+
+---------------------
+The table column headings in Tables S5 and S6 are as follows:
+uniprot: The UniProt ID
+Mut_res: phosphorylated/phosphomimetic mutated residue 
+ML predictions: Delta-Delta-G prediction of the Catboost full method (kcal/mol)
+NCBI_Gene_ID: NCBI Gene ID
+role_cancer: Tumor suppressor, oncogene, or driver annotations from CancerMine
+gene_hugo_id: HGNC gene ID
+phosphorylation FoldX: Delta-Delta-G of the FoldX direct phosphorylation model (kcal/mol)
+Number of Residues: Number of residues with any atom within 5 Angstroms of the phosphorylated residue
+Number of Atoms: Number of atoms within 5 Angstroms
+Number of COOH atoms: Number of GLU or ASP side chain oxygens within 5 Angstroms
+phi: residue phi angle (degrees)
+psi: residue psi angle (degrees)
+Length of PDB: Number of residues in protein
+FoldX: FoldX phosphomimetic Delta-Delta-G (kcal/mol)
+SS: Secondary structure (DSSP)
+RelSASA: Relative Solvent Accessible Surface Area (DSSP)
+AltPosition: residue’s location within its secondary structure element (see publication Methods)
+Hairpin: presence within a beta hairpin
+The rest of the contact terms quantify short-range or long-range contacts within 10 Angstroms, of various types
+SASA: Absolute solvent accessible surface area
+P: Number of local (residue-based) parallel relations
+X: Number of local cross relations 
+IP: Number of local inverse parallel relations
+S: Number of local series relations
+
+ 
