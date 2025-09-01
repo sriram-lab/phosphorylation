@@ -68,7 +68,7 @@ psp_search.m
 	input: alpha_predictions.csv, posit
 	output: energies
 
-The list of all 300k tyrosine predictions from alphafold2 are available on Zenodo. The XGB_Predictions column contains predictions referenced in the publication. 
+The list of all 300k tyrosine predictions from alphafold2 are available on Zenodo: 10.5281/zenodo.16458054. alpha_predictions_1.csv. The XGB_Predictions column contains predictions referenced in the publication. 
 
 ---------------------
 The table column headings in Tables S5 and S6 are as follows:
